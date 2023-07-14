@@ -29,6 +29,53 @@ tar zcvf {{MODEL_NAME}}.tar.gz *
 aws s3 cp {{MODEL_NAME}}.tar.gz s3://bucket/models/
 ```
 
+## Running
+
+To run install requirements for triggering the script (locally or in SageMaker notebook) and run main file:
+
+```bash
+pip3 install -r local-requirements.txt
+python3 run.py
+```
+
+## Roles
+This example assumes correct roles on AWS are used and created, sometimes it is not available by default. To achieve this
+use the ARN of role with all permissions as `role` variable (simply ARN as string is enough). The role needs following
+policies managed by AWS:
+* `AmazonSageMakerFullAccess`
+* `AmazonS3FullAccess`
+
+## Reusing Model
+
+In `run.py` the code below creates new model, by building the image and uploading it to ECR. Once the image is created,
+the model can be reused (models can be browsed in SageMaker console in section `Inference/Models`). Once model
+
+```python
+transformer = model.transformer(  # model is HuggingFaceModel instance
+    instance_count=1,
+    instance_type="ml.m4.xlarge",
+    output_path="s3://some-bucket/outputs/",
+    strategy="SingleRecord",
+    assemble_with="Line",
+    max_payload=100,
+)
+```
+
+To reuse the model find the name given to it while creating (given as parameter of `HuggingFaceModel` class, when not
+given SageMaker will assign default name) and pass it to `model.transformer` method:
+
+```python
+transformer = model.transformer(  # model is HuggingFaceModel instance
+    model_name=MODEL_NAME,  # must be created before
+    instance_count=1,
+    instance_type="ml.m4.xlarge",
+    output_path="s3://some-bucket/outputs/",
+    strategy="SingleRecord",
+    assemble_with="Line",
+    max_payload=100,
+)
+```
+
 ## Resources
 
 | Name                        | Type              | Link |

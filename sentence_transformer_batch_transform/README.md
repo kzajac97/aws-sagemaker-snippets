@@ -17,8 +17,8 @@ git clone https://huggingface.co/sentence-transformers/{{MODEL_NAME}}
 Add inference script and requirements file (optionally) to `code` directory:
 
 ```bash
-cp inference.py {{MODEL_NAME}}/code
-cp requirement.txt {{MODEL_NAME}}/code
+cp model/inference.py {{MODEL_NAME}}/code
+cp model/requirement.txt {{MODEL_NAME}}/code
 ```
 
 Create archive and store it on S3:

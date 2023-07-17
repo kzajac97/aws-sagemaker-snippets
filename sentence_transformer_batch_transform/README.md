@@ -14,11 +14,11 @@ git lfs install
 git clone https://huggingface.co/sentence-transformers/{{MODEL_NAME}}
 ```
 
-Add inference script and requirements file (optionally)
+Add inference script and requirements file (optionally) to `code` directory:
 
 ```bash
-cp inference.py {{MODEL_NAME}}
-cp requirement.txt {{MODEL_NAME}}
+cp inference.py {{MODEL_NAME}}/code
+cp requirement.txt {{MODEL_NAME}}/code
 ```
 
 Create archive and store it on S3:

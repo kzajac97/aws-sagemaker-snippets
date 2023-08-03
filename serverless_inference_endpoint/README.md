@@ -47,6 +47,8 @@ endpoint("The Transformer architecture")
 endpoint.cleanup()
 ```
 
+This repository also contains example notebook with usage of the custom serverless endpoint class. 
+
 ## Resources
 
 | Name                        | Link |

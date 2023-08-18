@@ -1,4 +1,4 @@
-variable aws_docker_registry_domain {
+variable "aws_docker_registry_domain" {
   # https://github.com/aws/deep-learning-containers/blob/master/available_images.md
   description = "AWS Account ID, where pre-build images are stored"
   default     = "763104351884"
@@ -16,8 +16,17 @@ resource "aws_sagemaker_model" "default" {
   execution_role_arn = aws_iam_role.default.arn
 
   container {
-    image = "${var.aws_docker_registry_domain}.dkr.ecr.${data.aws_region.current.name}.amazonaws.com/huggingface-pytorch-inference:2.0.0-transformers4.28.1-cpu-py310-ubuntu20.04"
+    image          = "${var.aws_docker_registry_domain}.dkr.ecr.${data.aws_region.current.name}.amazonaws.com/"
     model_data_url = "s3://${var.model_data_bucket_name}/${var.model_data_key}"
+    environment = {
+      HF_TASK                       = var.model_task,
+      TS_MAX_RESPONSE_SIZE          = 13107000,
+      TS_MAX_REQUEST_SIZE           = 13107000,
+      MMS_MAX_RESPONSE_SIZE         = 13107000,
+      MMS_MAX_REQUEST_SIZE          = 13107000,
+      MMS_WORKERS_PER_MODEL         = 1,
+      SAGEMAKER_CONTAINER_LOG_LEVEL = 20, # 20 is INFO
+    }
   }
 }
 

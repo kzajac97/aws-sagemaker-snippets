@@ -29,3 +29,15 @@ variable "instance_count" {
   type        = number
   default     = 1
 }
+
+variable "model_task" {
+  description = "The type of HuggingFace task to be used in container"
+  type        = string
+}
+
+variable "image_tag" {
+  # https://github.com/aws/deep-learning-containers
+  description = "The tag of the HuggingFace container image to be used from DeepLearning Containers"
+  type        = string
+  default     = "huggingface-pytorch-inference:2.0.0-transformers4.28.1-cpu-py310-ubuntu20.04"
+}

@@ -4,6 +4,7 @@ This repository contains snippets for model usage with AWS SageMaker.
 
 ### Contents
 
+* `real_time_inference_endpoint` - Terraform code for deploying HuggingFace model to real-time endpoint using DeepLearning Containers
 * `sentence_transformer_batch_transform` - Batch transform with Sentence Transformer
 * `serverless_inference_endpoint` - Serverless inference endpoint with text generation model from HuggingFace
 
@@ -14,6 +15,17 @@ AWS SageMaker offers 4 methods of deploying models (examples are added to this r
 * [Asynchronous inference](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html)
 * [Serverless inference](https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html)
 * [Batch inference](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform.html)
+
+### Real Time Endpoint
+
+Real time inference is the simplest deployment mechanism in AWS SageMaker, it creates a machine (or a number of them,
+since it also supports autoscaling), which listens to invocations and returns responses in real-time, executing them
+with minimal latency. One or more models can be hosted in such an endpoint, even using different containers or SageMaker
+pipelines. Autoscaling for endpoint instances can add the number of machines dynamically, as a response to changing
+workload (both upscaling and downscaling). 
+
+This method of deployment is probably easiest to use, but is also most expansive, since the model is alive 24/7, often 
+requiring big and expansive machines to run.
 
 ### Serverless Inference
 

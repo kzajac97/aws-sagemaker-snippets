@@ -41,11 +41,11 @@ curl -d '{"instances": ["text inputs"]}' -X POST http://127.0.0.1:$PORT/v1/model
 
 # Resources
 
-| Name                        | Link |
-|-----------------------------|------|
-| SageMaker Terraform Example | [LINK](https://github.com/jckuester/terraform-sagemaker-example/blob/master/main.tf) |
-| DeepLearning Container      | [LINK](https://github.com/aws/deep-learning-containers) |
+| Name                        | Link                                                                                                                               |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| SageMaker Terraform Example | [LINK](https://github.com/jckuester/terraform-sagemaker-example/blob/master/main.tf)                                               |
+| DeepLearning Container      | [LINK](https://github.com/aws/deep-learning-containers)                                                                            |
 | DeepLearning Container Docs | [LINK](https://docs.aws.amazon.com/deep-learning-containers/latest/devguide/deep-learning-containers-ec2-tutorials-inference.html) |
-| AWS SageMaker SDK           | [LINK](https://sagemaker.readthedocs.io/en/stable/) |
-| SageMaker AB Testing        | [LINK](https://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html) |
-| SageMaker Invoke Endpoint   | [LINK](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) |
+| AWS SageMaker SDK           | [LINK](https://sagemaker.readthedocs.io/en/stable/)                                                                                |
+| SageMaker AB Testing        | [LINK](https://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html)                                                      |
+| SageMaker Invoke Endpoint   | [LINK](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html)                                  |

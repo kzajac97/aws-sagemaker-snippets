@@ -51,9 +51,9 @@ This repository also contains example notebook with usage of the custom serverle
 
 ## Resources
 
-| Name                        | Link |
-|-----------------------------|------|
-| Galactica                   | [LINK](https://huggingface.co/facebook/galactica-125m) |
-| Galactica                   | [LINK](https://arxiv.org/abs/2211.09085) |
-| AWS SageMaker Serverless    | [LINK](https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html) |
-| AWS SageMaker SDK           | [LINK](https://sagemaker.readthedocs.io/en/stable/) |
+| Name                     | Link                                                                              |
+|--------------------------|-----------------------------------------------------------------------------------|
+| Galactica                | [LINK](https://huggingface.co/facebook/galactica-125m)                            |
+| Galactica                | [LINK](https://arxiv.org/abs/2211.09085)                                          |
+| AWS SageMaker Serverless | [LINK](https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html) |
+| AWS SageMaker SDK        | [LINK](https://sagemaker.readthedocs.io/en/stable/)                               |

@@ -60,6 +60,7 @@ it is usually easiest to add code dynamically, while using HuggingFace (as in th
 
 ### Resources
 
-| Name                | Link |
-| SageMaker examples  | [LINK](https://github.com/aws/amazon-sagemaker-examples/tree/main) |
-| SageMaker SDK       | [LINK](https://sagemaker.readthedocs.io/en/stable/) |
+| Name               | Link                                                               |
+|--------------------|--------------------------------------------------------------------|
+| SageMaker examples | [LINK](https://github.com/aws/amazon-sagemaker-examples/tree/main) |
+| SageMaker SDK      | [LINK](https://sagemaker.readthedocs.io/en/stable/)                |

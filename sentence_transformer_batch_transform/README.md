@@ -78,9 +78,9 @@ transformer = model.transformer(  # model is HuggingFaceModel instance
 
 ## Resources
 
-| Name                        | Type              | Link |
-|-----------------------------|-------------------|------|
-| Sentence Transformers       | Documentation     | [LINK](https://www.sbert.net/) |
-| Sentence Transformers       | Documentation     | [LINK](https://huggingface.co/sentence-transformers) |
-| AWS SageMaker with Custom Script | Blog         | [LINK](https://aws.amazon.com/blogs/machine-learning/hugging-face-on-amazon-sagemaker-bring-your-own-scripts-and-data/) |
-| AWS SageMaker SDK           | Documentation     | [LINK](https://sagemaker.readthedocs.io/en/stable/) |
+| Name                             | Type          | Link                                                                                                                    |
+|----------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------|
+| Sentence Transformers            | Documentation | [LINK](https://www.sbert.net/)                                                                                          |
+| Sentence Transformers            | Documentation | [LINK](https://huggingface.co/sentence-transformers)                                                                    |
+| AWS SageMaker with Custom Script | Blog          | [LINK](https://aws.amazon.com/blogs/machine-learning/hugging-face-on-amazon-sagemaker-bring-your-own-scripts-and-data/) |
+| AWS SageMaker SDK                | Documentation | [LINK](https://sagemaker.readthedocs.io/en/stable/)                                                                     |

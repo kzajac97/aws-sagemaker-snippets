@@ -47,7 +47,7 @@ Moreover, using SageMaker processing job augmentation can be quite easily decoup
 Defining script processor requires machine parameters (instance type and number of instances), image URI and AWS IAM
 role. Running the script processing job downloads the data from S3 to given by (controlled by source and destination
 parameters of `ProcessingInput`), runs code given by `code.py` parameter, which is downloaded to container and uploads 
-the results from container to S3 (controlled by source parameter of `ProcessingOutput`). 
+the results from container to S3 (controlled by parameters of `ProcessingOutput`). 
 
 To run job in standalone way use following code snippet adding required parameters:
 
